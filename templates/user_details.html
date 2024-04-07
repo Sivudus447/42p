@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+</head>
+<body>
+    <h2>User Details</h2>
+    <h3>User Information:</h3>
+    <table border="1">
+        <tr>
+            <th>Full Name</th>
+            <td>{{ user.full_name }}</td>
+        </tr>
+        <tr>
+            <th>Roll Number</th>
+            <td>{{ user.roll_number }}</td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td>{{ user.phone_number }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>{{ user.gender }}</td>
+        </tr>
+        <tr>
+            <th>Year of Study</th>
+            <td>{{ user.year_of_study }}</td>
+        </tr>
+    </table>
+
+    <h3>Attendance:</h3>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Total Days Attended</th>
+        </tr>
+        {% for record in attendance %}
+        <tr>
+            <td>{{ record.date }}</td>
+            <td>{{ record.total_days_attended }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
